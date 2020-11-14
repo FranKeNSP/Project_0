@@ -1,4 +1,6 @@
-import { useState } from 'react'
+// import React, { component } from 'react';
+// import Header from "./components/Header"; 
+import { useState } from 'react';
 
 function Contador(){
     const [contador, setContador] = useState(1)
@@ -14,7 +16,6 @@ function Contador(){
     function somarContador(){
         var num2 = parseFloat(somar.value)
         setContador(contador + num2)
-
     }
 
     function subtrairContador(){
@@ -26,20 +27,18 @@ function Contador(){
     function multiplicarContador(){
         var num2 = parseFloat(somar.value)
         setContador(contador * num2)
-
     }
 
     function dividirContador(){
         var num2 = parseFloat(somar.value)
         setContador(contador / num2)
-
     }
     return(
         <div>
             <div>{contador}</div>
             <button onClick={adicionarContador}>Adicionar</button>
             <button onClick={resetContador}>Resetar</button>
-            <input id="somar" placeholder="Somar"></input>
+            <input id="somar" placeholder="Insira um numero"></input>
             <button onClick={somarContador}>Somar</button>
             <button onClick={subtrairContador}>Subtrair</button>
             <button onClick={multiplicarContador}>Multiplicar</button>
