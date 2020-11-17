@@ -78,6 +78,7 @@ function Resultado(){
     }
     function saveInput(){
         num0.value = resultado
+        num1.value = ''
     }
 
     //Tela
@@ -85,7 +86,7 @@ function Resultado(){
         <div style={{backgroundColor: "#111"}}>
             <div style={resultadoStyles}>{resultado}</div>
             {/* <div style={resultadoStyles}>{resultadoFinal}</div> */}
-            <input style={inputStyles} id="num0" placeholder="Insira um numero" maxLength={2} ></input>
+            <input style={inputStyles} id="num0" placeholder="Insira um numero"></input>
             <input style={inputStyles} id="num1" placeholder="Insira um numero"></input>
             <button style={buttonStyles} onClick={resetInput}>CE</button>
             <button style={cButtonStyles} onClick={resetCalculadora}>C</button>
