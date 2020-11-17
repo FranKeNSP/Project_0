@@ -1,5 +1,4 @@
-// import React, { component } from 'react';
-// import Header from "./components/Header"; 
+import React, { component } from 'react';
 import { useState } from 'react';
 
 function Contador(){
@@ -54,8 +53,11 @@ function Resultado(){
     const [resultado, setResultado] = useState(0)
     // const [resultadoFinal, setResultadoFinal] = useState()
     
+
     function somarResultado(){
         setResultado(parseFloat(num0.value) + parseFloat(num1.value))
+        num0.value = resultado
+        
     }
     function subtrairResultado(){
         setResultado(parseFloat(num0.value) - parseFloat(num1.value))
@@ -76,23 +78,27 @@ function Resultado(){
         num0.value = ''
         num1.value = ''
     }
+    function saveInput(){
+        num0.value = resultado
+    }
 
     //Tela
     return(
         <div style={{backgroundColor: "#111"}}>
             <div style={resultadoStyles}>{resultado}</div>
             {/* <div style={resultadoStyles}>{resultadoFinal}</div> */}
-            <input style={inputStyles} id="num0" placeholder="Insira um numero"></input>
+            <input style={inputStyles} id="num0" placeholder="Insira um numero" maxLength={2} ></input>
             <input style={inputStyles} id="num1" placeholder="Insira um numero"></input>
             <button style={buttonStyles} onClick={resetInput}>CE</button>
             <button style={cButtonStyles} onClick={resetCalculadora}>C</button>
+            <button style={buttonStyles} onClick={saveInput}>Guardar resultado anterior</button>
             <br></br>
             <button style={buttonStyles} onClick={somarResultado}>Somar</button>
             <button style={buttonStyles} onClick={subtrairResultado}>Subtrair</button>
             <button style={buttonStyles} onClick={multiplicarResultado}>Multiplicar</button>
             <button style={buttonStyles} onClick={dividirResultado}>Dividir</button>
             <br></br>
-            {/* <button style={calcularButtonStyles} onClick={calcularResultado}>Calcular</button> */}
+            {/* <button style={buttonStyles} onClick={calcularResultado}>Calcular</button> */}
         </div>
     )
 }
