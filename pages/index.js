@@ -55,9 +55,7 @@ function Resultado(){
     
 
     function somarResultado(){
-        setResultado(parseFloat(num0.value) + parseFloat(num1.value))
-        num0.value = resultado
-        
+        setResultado(parseFloat(num0.value) + parseFloat(num1.value))        
     }
     function subtrairResultado(){
         setResultado(parseFloat(num0.value) - parseFloat(num1.value))
