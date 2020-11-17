@@ -77,7 +77,7 @@ function Resultado(){
         num1.value = ''
     }
 
-    //tela
+    //Tela
     return(
         <div style={{backgroundColor: "#111"}}>
             <div style={resultadoStyles}>{resultado}</div>
